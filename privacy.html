@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'/><meta name='viewport' content='width=device-width, initial-scale=1'/><title>Privacy — BioreCyclio</title><script src='https://cdn.tailwindcss.com'></script></head><body class='text-slate-800 antialiased'>  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="/index.html" class="flex items-center gap-3">
+          <img src="/assets/logo.png" class="h-8 w-auto" alt="BioreCyclio logo" onerror="this.style.display='none'">
+          <span class="font-semibold text-lg">Biore<span class="text-sky-600">Cyclio</span></span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="/index.html" class="nav-link">Home</a>
+          <a href="/technology.html" class="nav-link">Technology</a>
+          <a href="/model.html" class="nav-link">Biogas Model</a>
+          <a href="/impact.html" class="nav-link">Impact</a>
+          <a href="/contact.html" class="px-3 py-2 rounded-full bg-sky-600 text-white hover:bg-sky-700">Contact</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-md border border-slate-300" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200">
+      <div class="px-4 py-3 flex flex-col gap-3 text-sm">
+        <a href="/index.html" class="nav-link">Home</a>
+        <a href="/technology.html" class="nav-link">Technology</a>
+        <a href="/model.html" class="nav-link">Biogas Model</a>
+        <a href="/impact.html" class="nav-link">Impact</a>
+        <a href="/contact.html" class="px-3 py-2 rounded-md bg-sky-600 text-white text-center">Contact</a>
+      </div>
+    </div>
+  </header>
+<section class='mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16'><h1 class='text-3xl font-bold'>Privacy</h1><p class='mt-2 text-slate-700'>We collect contact details you voluntarily provide (name, email, message) to respond to inquiries. No analytics cookies used.</p></section>  <footer class="border-t border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-slate-600">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>&copy; <span id="year"></span> BioreCyclio. All rights reserved.</p>
+        <nav class="flex gap-4">
+          <a href="/assets/Biorecyclio-business-plan.pdf" class="hover:text-sky-600">Business Plan</a>
+          <a href="/privacy.html" class="hover:text-sky-600">Privacy</a>
+          <a href="/terms.html" class="hover:text-sky-600">Terms</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('menuBtn')?.addEventListener('click', ()=>{
+      document.getElementById('mobileMenu')?.classList.toggle('hidden');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body></html>
