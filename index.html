@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BioreCyclio — Smart Biogas Digesters</title>
+  <meta name="description" content="BioreCyclio designs affordable smart biogas digesters that turn organic waste into clean energy and biofertilizer. You waste it, we transform it." />
+  <meta property="og:title" content="BioreCyclio — Smart Biogas Digesters" />
+  <meta property="og:description" content="You waste it, we transform it." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://biorecyclio.com" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hero-gradient { background: radial-gradient(1200px 600px at 10% 10%, #e0f2fe 0%, rgba(224,242,254,0) 60%), radial-gradient(800px 400px at 90% 20%, #dcfce7 0%, rgba(220,252,231,0) 60%); }
+    .glass { backdrop-filter: blur(8px); background: rgba(255,255,255,0.75); }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "BioreCyclio",
+    "url": "https://biorecyclio.com",
+    "slogan": "You waste it, we transform it",
+    "logo": "https://biorecyclio.com/assets/logo.svg",
+    "sameAs": [],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "email": "hello@biorecyclio.com"
+    }]
+  }
+  </script>
+</head>
+<body class="text-slate-800 antialiased">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="#home" class="flex items-center gap-2">
+          <svg width="28" height="28" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <circle cx="24" cy="24" r="22" stroke="#0ea5e9" stroke-width="2"></circle>
+            <path d="M12 28c10 0 14-8 24-8" stroke="#10b981" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M14 34c6-6 10-10 20-10" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round"></path>
+          </svg>
+          <span class="font-semibold text-lg">Biore<span class="text-sky-600">Cyclio</span></span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#product" class="hover:text-sky-600">Product</a>
+          <a href="#how" class="hover:text-sky-600">How it works</a>
+          <a href="#impact" class="hover:text-sky-600">Impact</a>
+          <a href="#rnd" class="hover:text-sky-600">R&amp;D</a>
+          <a href="#roadmap" class="hover:text-sky-600">Roadmap</a>
+          <a href="#faqs" class="hover:text-sky-600">FAQs</a>
+          <a href="#contact" class="px-3 py-2 rounded-full bg-sky-600 text-white hover:bg-sky-700">Contact</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-md border border-slate-300" aria-label="Open menu">
+          <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200">
+      <div class="px-4 py-3 flex flex-col gap-3 text-sm">
+        <a href="#product" class="hover:text-sky-600">Product</a>
+        <a href="#how" class="hover:text-sky-600">How it works</a>
+        <a href="#impact" class="hover:text-sky-600">Impact</a>
+        <a href="#rnd" class="hover:text-sky-600">R&amp;D</a>
+        <a href="#roadmap" class="hover:text-sky-600">Roadmap</a>
+        <a href="#faqs" class="hover:text-sky-600">FAQs</a>
+        <a href="#contact" class="px-3 py-2 rounded-md bg-sky-600 text-white text-center">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero-gradient">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
+            You waste it, <span class="text-sky-600">we transform it</span>.
+          </h1>
+          <p class="mt-4 text-lg text-slate-700">
+            BioreCyclio designs and builds smart biogas digesters that convert organic waste
+            into clean cooking gas and nutrient-rich biofertilizer — reliable, affordable, and built for both urban and rural communities.
+          </p>
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <a href="#contact" class="inline-flex items-center justify-center px-5 py-3 rounded-full bg-sky-600 text-white hover:bg-sky-700">Request a Quote</a>
+            <a href="assets/Biorecyclio-business-plan.pdf" class="inline-flex items-center justify-center px-5 py-3 rounded-full border border-slate-300 hover:border-slate-400">Download Business Plan</a>
+          </div>
+          <p class="mt-3 text-xs text-slate-500">* Prototype under development. Pre-orders welcome.</p>
+        </div>
+        <div>
+          <div class="glass rounded-3xl shadow-2xl p-6">
+            <h2 class="font-semibold text-slate-900">Smart Digester Highlights</h2>
+            <ul class="mt-4 space-y-3 text-sm leading-6">
+              <li class="flex gap-3"><span class="mt-1.5 h-2 w-2 rounded-full bg-green-500"></span> Solar-powered automatic mixing plus manual agitation to enhance gas yield (up to ~40% vs. conventional designs).</li>
+              <li class="flex gap-3"><span class="mt-1.5 h-2 w-2 rounded-full bg-green-500"></span> Off‑grid system: substrate inlet, digester, gas storage, burner, and biofertilizer outlet.</li>
+              <li class="flex gap-3"><span class="mt-1.5 h-2 w-2 rounded-full bg-green-500"></span> Designed for kitchens, restaurants, markets, schools, hospitals, and farms.</li>
+              <li class="flex gap-3"><span class="mt-1.5 h-2 w-2 rounded-full bg-green-500"></span> Converts everyday organic waste into clean fuel and fertilizer onsite.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product -->
+  <section id="product" class="py-16 sm:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="text-3xl font-bold">The Product</h2>
+          <p class="mt-4 text-slate-700">A portable, prefabricated biogas unit engineered to be efficient, robust, and low‑maintenance.</p>
+          <div class="mt-6 grid sm:grid-cols-2 gap-6">
+            <div class="p-5 rounded-2xl border border-slate-200">
+              <h3 class="font-semibold">Core Modules</h3>
+              <ul class="mt-3 list-disc list-inside text-sm text-slate-700">
+                <li>Substrate inlet</li>
+                <li>Digester</li>
+                <li>Gas storage/reservoir</li>
+                <li>Gas burner</li>
+                <li>Exhaust outlet (biofertilizer)</li>
+              </ul>
+            </div>
+            <div class="p-5 rounded-2xl border border-slate-200">
+              <h3 class="font-semibold">Feedstocks</h3>
+              <ul class="mt-3 list-disc list-inside text-sm text-slate-700">
+                <li>Kitchen &amp; food waste</li>
+                <li>Restaurant &amp; market waste</li>
+                <li>Livestock &amp; farm residues</li>
+              </ul>
+            </div>
+          </div>
+          <p class="mt-6 text-sm text-slate-500">Note: gas storage may use airtight polythene tube with inlet/outlet configuration per design.</p>
+        </div>
+        <div class="glass rounded-3xl shadow-xl p-6">
+          <h3 class="font-semibold">Why it’s smart</h3>
+          <p class="mt-3 text-slate-700">Integrated solar-powered mixing boosts biogas production and improves process stability. The design prioritizes affordability without compromising on performance.</p>
+          <div class="mt-6 grid sm:grid-cols-2 gap-4 text-sm">
+            <div class="rounded-xl border border-slate-200 p-4">
+              <p class="font-medium">Off-grid</p>
+              <p class="mt-1 text-slate-600">Works in all weather without external electricity.</p>
+            </div>
+            <div class="rounded-xl border border-slate-200 p-4">
+              <p class="font-medium">Scalable</p>
+              <p class="mt-1 text-slate-600">From households to schools and farms.</p>
+            </div>
+            <div class="rounded-xl border border-slate-200 p-4">
+              <p class="font-medium">Low maintenance</p>
+              <p class="mt-1 text-slate-600">Robust design with minimal upkeep.</p>
+            </div>
+            <div class="rounded-xl border border-slate-200 p-4">
+              <p class="font-medium">Dual benefit</p>
+              <p class="mt-1 text-slate-600">Clean fuel + nutrient-rich biofertilizer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="bg-slate-50 py-16 sm:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold">How it works</h2>
+      <div class="mt-8 grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-6 text-sm">
+        <div class="p-5 rounded-2xl bg-white border border-slate-200">
+          <p class="font-semibold">1) Feed</p>
+          <p class="mt-1 text-slate-700">Organic waste enters via the substrate inlet.</p>
+        </div>
+        <div class="p-5 rounded-2xl bg-white border border-slate-200">
+          <p class="font-semibold">2) Digest</p>
+          <p class="mt-1 text-slate-700">Anaerobic microbes produce biogas in the digester.</p>
+        </div>
+        <div class="p-5 rounded-2xl bg-white border border-slate-200">
+          <p class="font-semibold">3) Store</p>
+          <p class="mt-1 text-slate-700">Biogas is stored in an airtight reservoir.</p>
+        </div>
+        <div class="p-5 rounded-2xl bg-white border border-slate-200">
+          <p class="font-semibold">4) Use</p>
+          <p class="mt-1 text-slate-700">Gas powers a burner or lighting appliance.</p>
+        </div>
+        <div class="p-5 rounded-2xl bg-white border border-slate-200">
+          <p class="font-semibold">5) Return</p>
+          <p class="mt-1 text-slate-700">Digestate exits as a liquid biofertilizer.</p>
+        </div>
+      </div>
+      <p class="mt-6 text-sm text-slate-600">1 kg of kitchen waste can generate up to ~0.45 m³ of biogas (typical average from trials; actual yield depends on feedstock &amp; conditions).</p>
+    </div>
+  </section>
+
+  <!-- Impact -->
+  <section id="impact" class="py-16 sm:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold">Impact where it matters</h2>
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl border border-slate-200">
+          <p class="font-semibold">Cleaner air for families</p>
+          <p class="mt-1 text-slate-700">Replaces smoky kerosene/wood stoves with clean-burning biogas.</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-200">
+          <p class="font-semibold">GHG emission reduction</p>
+          <p class="mt-1 text-slate-700">Captures methane from decomposing waste and converts it to CO₂ via combustion.</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-200">
+          <p class="font-semibold">Waste diversion</p>
+          <p class="mt-1 text-slate-700">Onsite processing cuts landfill volumes and collection costs.</p>
+        </div>
+      </div>
+      <p class="mt-6 text-sm text-slate-600">Designed for households, restaurants, markets, schools, hospitals, and farms.</p>
+    </div>
+  </section>
+
+  <!-- R&D -->
+  <section id="rnd" class="bg-slate-50 py-16 sm:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="text-3xl font-bold">Research &amp; Development</h2>
+          <p class="mt-4 text-slate-700">Initial prototypes built with local materials demonstrated consistent biogas production. Next steps: refine the solar mixing system and finalize a manufacturable smart digester prototype.</p>
+          <ul class="mt-6 list-disc list-inside text-slate-700">
+            <li>Prototype validation with real kitchen waste cycles.</li>
+            <li>Performance testing of solar-powered mixing.</li>
+            <li>Design for manufacturability and durability.</li>
+          </ul>
+        </div>
+        <div class="glass rounded-3xl shadow-xl p-6">
+          <h3 class="font-semibold">Target markets</h3>
+          <p class="mt-3 text-slate-700">Emerging markets where waste management and clean cooking energy are critical — with initial focus on Nigeria.</p>
+          <div class="mt-6 grid sm:grid-cols-2 gap-4 text-sm">
+            <div class="rounded-xl border border-slate-200 p-4">
+              <p class="font-medium">Direct sales</p>
+              <p class="mt-1 text-slate-600">To individuals and institutions.</p>
+            </div>
+            <div class="rounded-xl border border-slate-200 p-4">
+              <p class="font-medium">Partner channels</p>
+              <p class="mt-1 text-slate-600">Green energy networks &amp; distributors.</p>
+            </div>
+            <div class="rounded-xl border border-slate-200 p-4">
+              <p class="font-medium">Leasing options</p>
+              <p class="mt-1 text-slate-600">Including microfinance partnerships.</p>
+            </div>
+            <div class="rounded-xl border border-slate-200 p-4">
+              <p class="font-medium">Scalable ops</p>
+              <p class="mt-1 text-slate-600">Assembly lines as demand grows.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section id="roadmap" class="py-16 sm:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold">Roadmap</h2>
+      <ol class="mt-8 relative border-l border-slate-200 pl-6 space-y-8">
+        <li>
+          <div class="absolute -left-2.5 top-0 h-5 w-5 rounded-full bg-sky-600"></div>
+          <p class="font-semibold">Phase I — Prototyping</p>
+          <p class="text-slate-700 text-sm mt-1">Concept, lab tests, first working unit with solar mixing.</p>
+        </li>
+        <li>
+          <div class="absolute -left-2.5 h-5 w-5 rounded-full bg-sky-600"></div>
+          <p class="font-semibold">Phase II — Replication &amp; Scale</p>
+          <p class="text-slate-700 text-sm mt-1">Pre-orders, small-batch production, channel partnerships.</p>
+        </li>
+        <li>
+          <div class="absolute -left-2.5 h-5 w-5 rounded-full bg-slate-300"></div>
+          <p class="font-semibold">Phase III — Assembly Lines</p>
+          <p class="text-slate-700 text-sm mt-1">Regional assembly to reduce marginal costs &amp; meet demand.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section id="faqs" class="bg-slate-50 py-16 sm:py-24">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold">Frequently Asked Questions</h2>
+      <div class="mt-8 divide-y divide-slate-200 border border-slate-200 rounded-2xl bg-white">
+        <details class="p-6 group">
+          <summary class="flex cursor-pointer items-center justify-between font-medium">
+            <span>What waste can I feed into the digester?</span>
+            <span class="ml-4 group-open:rotate-180 transition"><svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          </summary>
+          <p class="mt-3 text-slate-700 text-sm">Typical kitchen scraps, fruit/vegetable waste, and suitable farm residues. Avoid plastics, metals, and chemicals.</p>
+        </details>
+        <details class="p-6 group">
+          <summary class="flex cursor-pointer items-center justify-between font-medium">
+            <span>How much gas can it produce?</span>
+            <span class="ml-4 group-open:rotate-180 transition"><svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          </summary>
+          <p class="mt-3 text-slate-700 text-sm">Yields vary; as a guide, ~1 kg of kitchen waste can produce up to ~0.45 m³ of biogas under favorable conditions.</p>
+        </details>
+        <details class="p-6 group">
+          <summary class="flex cursor-pointer items-center justify-between font-medium">
+            <span>Does it work without grid power?</span>
+            <span class="ml-4 group-open:rotate-180 transition"><svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          </summary>
+          <p class="mt-3 text-slate-700 text-sm">Yes — the mixing system is solar‑powered and the process itself is anaerobic.</p>
+        </details>
+        <details class="p-6 group">
+          <summary class="flex cursor-pointer items-center justify-between font-medium">
+            <span>Who is it for?</span>
+            <span class="ml-4 group-open:rotate-180 transition"><svg width="16" height="16" viewBox="0 0 20 20" fill="none"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          </summary>
+          <p class="mt-3 text-slate-700 text-sm">Households, restaurants, markets, schools, hospitals, and farms seeking onsite waste-to-energy.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 sm:py-24">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl border border-slate-200 p-8">
+        <h2 class="text-3xl font-bold">Get in touch</h2>
+        <p class="mt-2 text-slate-700">Have questions or want a quote? Send us a message — we’ll reply promptly.</p>
+        <form id="contactForm" class="mt-8 grid gap-4">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium">Name</label>
+              <input type="text" id="name" required class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Email</label>
+              <input type="email" id="email" required class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-medium">Use case</label>
+            <select id="usecase" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2">
+              <option>Household</option>
+              <option>Restaurant / Market</option>
+              <option>School / Hospital</option>
+              <option>Farm</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium">Message</label>
+            <textarea id="message" rows="4" required class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500"></textarea>
+          </div>
+          <div class="flex gap-3">
+            <button type="submit" class="px-5 py-3 rounded-full bg-sky-600 text-white hover:bg-sky-700">Send</button>
+            <a href="mailto:hello@biorecyclio.com" class="px-5 py-3 rounded-full border border-slate-300 hover:border-slate-400">Email us directly</a>
+          </div>
+          <p class="text-xs text-slate-500">By sending, you consent to be contacted about BioreCyclio products and services.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-slate-600">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>&copy; <span id="year"></span> BioreCyclio. All rights reserved.</p>
+        <nav class="flex gap-4">
+          <a href="#" class="hover:text-sky-600">Privacy</a>
+          <a href="#" class="hover:text-sky-600">Terms</a>
+          <a href="assets/Biorecyclio-business-plan.pdf" class="hover:text-sky-600">Business Plan</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    document.getElementById('menuBtn')?.addEventListener('click', () => {
+      const m = document.getElementById('mobileMenu');
+      m.classList.toggle('hidden');
+    });
+
+    // Contact form -> opens mailto with composed body (no backend needed)
+    const contactForm = document.getElementById('contactForm');
+    contactForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const email = encodeURIComponent(document.getElementById('email').value.trim());
+      const usecase = encodeURIComponent(document.getElementById('usecase').value);
+      const message = encodeURIComponent(document.getElementById('message').value.trim());
+      const subject = encodeURIComponent('BioreCyclio Contact — ' + decodeURIComponent(usecase));
+      const body = encodeURIComponent(
+        'Name: ' + decodeURIComponent(name) + '\n' +
+        'Email: ' + decodeURIComponent(email) + '\n' +
+        'Use case: ' + decodeURIComponent(usecase) + '\n\n' +
+        message + '\n\n— Sent from biorecyclio.com'
+      );
+      const mailto = 'mailto:hello@biorecyclio.com?subject=' + subject + '&body=' + body;
+      window.location.href = mailto;
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
