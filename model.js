@@ -12,17 +12,17 @@ function rowTemplate(i) {
   return `
   <div class="grid grid-cols-12 gap-2 items-center row" data-index="${i}">
     <div class="col-span-6">
-      <select class="feed w-full rounded-xl border border-slate-300 px-3 py-2">
+      <select class="feed w-full rounded-xl border border-slate-300 px-3 py-2 text-slate-900">
         ${Object.keys(FEEDSTOCKS).map(k=>`<option>${k}</option>`).join("")}
       </select>
     </div>
     <div class="col-span-6">
       <div class="flex items-center gap-2">
-        <input type="number" class="mass w-full rounded-xl border border-slate-300 px-3 py-2" value="10" min="0" step="0.1" />
-        <span class="text-xs text-slate-500">kg/day</span>
+        <input type="number" class="mass w-full rounded-xl border border-slate-300 px-3 py-2 text-slate-900" value="10" min="0" step="0.1" />
+        <span class="text-xs text-slate-300">kg/day</span>
       </div>
     </div>
-    <div class="col-span-12 text-xs text-slate-600">
+    <div class="col-span-12 text-xs text-slate-300">
       <span class="badge"></span>
     </div>
   </div>`;
@@ -66,9 +66,9 @@ function recalc() {
   const ch4_m3_day = biogas_m3_day * CH4frac;
   const energy_kwh_day = biogas_m3_day * kwhPerM3;
 
-  const dailyVol_m3 = masskg / 1000.0; // assume ~1 kg/L density
-  const Vdig_m3 = dailyVol_m3 * HRT;   // working volume
-  const OLR = VSkg / Math.max(Vdig_m3, 1e-6); // kg VS per m3 per day
+  const dailyVol_m3 = masskg / 1000.0;
+  const Vdig_m3 = dailyVol_m3 * HRT;
+  const OLR = VSkg / Math.max(Vdig_m3, 1e-6);
   const storage_m3 = storageFrac * biogas_m3_day;
 
   document.getElementById("sumMass").textContent = fmt(masskg);

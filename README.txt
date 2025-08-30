@@ -1,1 +1,1 @@
-BioreCyclio v2 — generated 2025-08-29 23:55
+BioreCyclio v2.3 — green/dark theme, logo via assets/logo.png, hero slider, gallery, relative JS paths. Built 2025-08-30 00:15

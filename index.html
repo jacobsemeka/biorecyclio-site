@@ -1,118 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang='en'><head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0ea5e9" />
+  <meta name="theme-color" content="#065f46" />
   <link rel="icon" href="assets/logo.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <title>BioreCyclio — Waste to Clean Energy</title>
-  <meta name="description" content="Smart biogas digesters that turn organic waste into clean energy and biofertilizer.">
+  <meta name="description" content="Smart biogas digesters turning organic waste into clean energy and biofertilizer.">
   <style>
-    .hero::before { content: ""; position: absolute; inset:0; background: linear-gradient(to top right, rgba(15,23,42,0.65), rgba(2,132,199,0.35)); }
-    .hero-img { object-fit: cover; width:100%; height:100%; filter: saturate(1.05); }
-    .nav-link { color:#475569; }
-    .nav-link:hover { color:#0284c7; }
-    .glass { backdrop-filter: blur(8px); background: rgba(255,255,255,0.75); }
+    :root { --brand:#065f46; --brand-2:#059669; }
+    .glass { backdrop-filter: blur(10px); background: rgba(17,24,39,0.35); }
+    .hero::before { content:""; position:absolute; inset:0; background: linear-gradient(to top right, rgba(2,6,23,0.60), rgba(6,95,70,0.45)); }
+    .hero-img { object-fit: cover; width:100%; height:100%; }
+    .nav-link { color:#cbd5e1; }
+    .nav-link:hover { color:#a7f3d0; }
+    .btn-brand { background: var(--brand); }
+    .btn-brand:hover { background: #064e3b; }
+    .pill { border:1px solid rgba(255,255,255,0.2); }
+    .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+    .dot { width:10px; height:10px; border-radius:999px; background:#ffffff55; }
+    .dot.active { background:#ffffff; }
   </style>
 
-</head>
-<body class="text-slate-800 antialiased">
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+</head><body class='bg-slate-950 text-slate-100 antialiased'>  <header class="sticky top-0 z-50 bg-slate-900/70 backdrop-blur border-b border-emerald-900">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 items-center justify-between">
         <a href="index.html" class="flex items-center gap-3">
           <img src="assets/logo.png" class="h-8 w-auto" alt="BioreCyclio logo" onerror="this.style.display='none'">
-          <span class="font-semibold text-lg">Biore<span class="text-sky-600">Cyclio</span></span>
+          <span class="font-semibold text-lg text-white">Biore<span class="text-emerald-400">Cyclio</span></span>
         </a>
         <nav class="hidden md:flex items-center gap-6 text-sm">
           <a href="index.html" class="nav-link">Home</a>
           <a href="technology.html" class="nav-link">Technology</a>
           <a href="model.html" class="nav-link">Biogas Model</a>
           <a href="impact.html" class="nav-link">Impact</a>
-          <a href="contact.html" class="px-3 py-2 rounded-full bg-sky-600 text-white hover:bg-sky-700">Contact</a>
+          <a href="contact.html" class="px-3 py-2 rounded-full bg-emerald-600 text-white hover:bg-emerald-700">Contact</a>
         </nav>
-        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-md border border-slate-300" aria-label="Open menu">
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-md border border-emerald-800 text-white" aria-label="Open menu">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
       </div>
     </div>
-    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200">
+    <div id="mobileMenu" class="md:hidden hidden border-t border-emerald-900 bg-slate-900/95">
       <div class="px-4 py-3 flex flex-col gap-3 text-sm">
         <a href="index.html" class="nav-link">Home</a>
         <a href="technology.html" class="nav-link">Technology</a>
         <a href="model.html" class="nav-link">Biogas Model</a>
         <a href="impact.html" class="nav-link">Impact</a>
-        <a href="contact.html" class="px-3 py-2 rounded-md bg-sky-600 text-white text-center">Contact</a>
+        <a href="contact.html" class="px-3 py-2 rounded-md bg-emerald-600 text-white text-center">Contact</a>
       </div>
     </div>
   </header>
 
-<section class="relative hero">
-  <img class="hero-img absolute inset-0" src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=2000&auto=format&fit=crop" alt="Green landscape background" />
+<!-- HERO SLIDER -->
+<section class="relative hero overflow-hidden">
+  <div class="absolute inset-0">
+    <div class="slider h-[72vh] relative">
+      <img class="hero-img absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1492496913980-501348b61469?q=80&w=2000&auto=format&fit=crop" alt="Green leaves" />
+      <img class="hero-img absolute inset-0 w-full h-full object-cover opacity-0" src="https://images.unsplash.com/photo-1523861751938-8584d8327f5d?q=80&w=2000&auto=format&fit=crop" alt="Biogas flame" />
+      <img class="hero-img absolute inset-0 w-full h-full object-cover opacity-0" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2000&auto=format&fit=crop" alt="Rural home" />
+    </div>
+  </div>
   <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
-    <div class="max-w-2xl text-white">
-      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight">You waste it, <span class="text-sky-200">we transform it</span>.</h1>
-      <p class="mt-4 text-lg text-slate-100">Affordable, robust, and off-grid smart digesters for households, restaurants, schools, and farms.</p>
-      <div class="mt-6 flex flex-col sm:flex-row gap-3">
-        <a href="contact.html" class="inline-flex items-center justify-center px-5 py-3 rounded-full bg-sky-600 text-white hover:bg-sky-700">Request a Quote</a>
-        <a href="model.html" class="inline-flex items-center justify-center px-5 py-3 rounded-full border border-white/70 text-white hover:bg-white/10">Open Biogas Model</a>
+    <div class="max-w-3xl text-white drop-shadow-xl">
+      <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight">You waste it, <span class="text-emerald-300">we transform it</span>.</h1>
+      <p class="mt-4 text-lg text-emerald-100">Affordable, robust, and off-grid smart digesters for households, restaurants, schools, and farms.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 rounded-full btn-brand text-white">Request a Quote</a>
+        <a href="model.html" class="inline-flex items-center justify-center px-6 py-3 rounded-full pill text-white">Open Biogas Model</a>
+      </div>
+      <div class="mt-6 flex gap-2" id="dots">
+        <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
       </div>
     </div>
   </div>
 </section>
-<section class="py-16 sm:py-24">
+
+<!-- FEATURE CARDS -->
+<section class="py-16 sm:py-24 bg-slate-900">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="grid lg:grid-cols-3 gap-6">
-      <div class="rounded-2xl overflow-hidden shadow-lg">
+      <div class="rounded-3xl overflow-hidden shadow-soft bg-slate-800">
         <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1600&auto=format&fit=crop" alt="Kitchen waste" class="w-full h-56 object-cover">
-        <div class="p-6"><h3 class="font-semibold">Organic waste → Energy</h3>
-          <p class="mt-2 text-sm text-slate-700">Food scraps, market residues, and manures become clean gas and liquid biofertilizer.</p>
+        <div class="p-6">
+          <h3 class="font-semibold text-white">Organic waste → Energy</h3>
+          <p class="mt-2 text-sm text-slate-300">Food scraps, market residues, and manures become clean gas and liquid biofertilizer.</p>
         </div>
       </div>
-      <div class="rounded-2xl overflow-hidden shadow-lg">
-        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop" alt="Biogas flame" class="w-full h-56 object-cover">
-        <div class="p-6"><h3 class="font-semibold">Solar-powered mixing</h3>
-          <p class="mt-2 text-sm text-slate-700">Integrated mixing improves yields and process stability with minimal maintenance.</p>
+      <div class="rounded-3xl overflow-hidden shadow-soft bg-slate-800">
+        <img src="https://images.unsplash.com/photo-1523861751938-8584d8327f5d?q=80&w=1600&auto=format&fit=crop" alt="Biogas flame" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-white">Solar-powered mixing</h3>
+          <p class="mt-2 text-sm text-slate-300">Integrated mixing improves yields and process stability with minimal maintenance.</p>
         </div>
       </div>
-      <div class="rounded-2xl overflow-hidden shadow-lg">
+      <div class="rounded-3xl overflow-hidden shadow-soft bg-slate-800">
         <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop" alt="Rural home" class="w-full h-56 object-cover">
-        <div class="p-6"><h3 class="font-semibold">Built for real-world use</h3>
-          <p class="mt-2 text-sm text-slate-700">From homes to schools and farms, designed for affordability and reliability.</p>
+        <div class="p-6">
+          <h3 class="font-semibold text-white">Built for real-world use</h3>
+          <p class="mt-2 text-sm text-slate-300">From homes to schools and farms, designed for affordability and reliability.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section class="bg-slate-50 py-16 sm:py-24">
+
+<!-- GALLERY -->
+<section class="bg-slate-900 pb-20">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-10 items-start">
-      <div class="glass rounded-3xl p-8 shadow">
-        <h2 class="text-3xl font-bold">Smart Digester</h2>
-        <ul class="mt-6 space-y-3 text-sm leading-6 text-slate-700">
-          <li>Substrate inlet · Digester · Gas storage · Burner · Biofertilizer outlet</li>
-          <li>Solar mixing + manual agitation</li>
-          <li>Off-grid and scalable</li>
-          <li>Low maintenance, high impact</li>
-        </ul>
-        <div class="mt-6 flex gap-3">
-          <a href="technology.html" class="px-5 py-3 rounded-full bg-sky-600 text-white hover:bg-sky-700">See technology</a>
-          <a href="assets/Biorecyclio-business-plan.pdf" class="px-5 py-3 rounded-full border border-slate-300 hover:border-slate-400">Business plan</a>
-        </div>
-      </div>
-      <img class="rounded-3xl shadow object-cover w-full h-[420px]" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop" alt="Team working">
+    <h2 class="text-3xl font-bold mb-6">Gallery</h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      <img class="rounded-2xl shadow-soft object-cover w-full h-56" src="https://images.unsplash.com/photo-1498575207490-3e0b33373519?q=80&w=1600&auto=format&fit=crop" alt="Food scraps">
+      <img class="rounded-2xl shadow-soft object-cover w-full h-56" src="https://images.unsplash.com/photo-1492496913980-501348b61469?q=80&w=1600&auto=format&fit=crop" alt="Leaf">
+      <img class="rounded-2xl shadow-soft object-cover w-full h-56" src="https://images.unsplash.com/photo-1614854262398-62f091b21642?q=80&w=1600&auto=format&fit=crop" alt="Flame">
+      <img class="rounded-2xl shadow-soft object-cover w-full h-56" src="https://images.unsplash.com/photo-1524592984084-3cbf976a1ed7?q=80&w=1600&auto=format&fit=crop" alt="Rural home">
+      <img class="rounded-2xl shadow-soft object-cover w-full h-56" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1600&auto=format&fit=crop" alt="Farm field">
+      <img class="rounded-2xl shadow-soft object-cover w-full h-56" src="https://images.unsplash.com/photo-1563906267088-b029e7101112?q=80&w=1600&auto=format&fit=crop" alt="Fertilizer">
     </div>
   </div>
 </section>
-  <footer class="border-t border-slate-200">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-slate-600">
+  <footer class="border-t border-emerald-900 bg-slate-950 text-slate-300">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-sm">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
         <p>&copy; <span id="year"></span> BioreCyclio. All rights reserved.</p>
         <nav class="flex gap-4">
-          <a href="assets/Biorecyclio-business-plan.pdf" class="hover:text-sky-600">Business Plan</a>
-          <a href="privacy.html" class="hover:text-sky-600">Privacy</a>
-          <a href="terms.html" class="hover:text-sky-600">Terms</a>
+          <a href="assets/Biorecyclio-business-plan.pdf" class="hover:text-emerald-400">Business Plan</a>
+          <a href="privacy.html" class="hover:text-emerald-400">Privacy</a>
+          <a href="terms.html" class="hover:text-emerald-400">Terms</a>
         </nav>
       </div>
     </div>
@@ -121,8 +134,18 @@
     document.getElementById('menuBtn')?.addEventListener('click', ()=>{
       document.getElementById('mobileMenu')?.classList.toggle('hidden');
     });
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const yEl=document.getElementById('year'); if(yEl) yEl.textContent = new Date().getFullYear();
   </script>
 
-</body>
-</html>
+<script>
+// Simple slider
+const slides = document.querySelectorAll('.slider .hero-img');
+const dots = document.querySelectorAll('#dots .dot');
+let i=0;
+function show(n) { slides.forEach((s,idx)=>{ s.style.opacity = (idx===n ? '1':'0'); s.style.transition='opacity 800ms'; });
+  dots.forEach((d,idx)=>d.classList.toggle('active', idx===n)); }
+function next() { i=(i+1)%slides.length; show(i); }
+show(0); let timer=setInterval(next, 5000);
+dots.forEach((d,idx)=> d.addEventListener('click', ()=>{ i=idx; show(i); clearInterval(timer); timer=setInterval(next,5000); }));
+</script>
+</body></html>

@@ -1,40 +1,61 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'/><meta name='viewport' content='width=device-width, initial-scale=1'/><title>Privacy — BioreCyclio</title><script src='https://cdn.tailwindcss.com'></script></head><body class='text-slate-800 antialiased'>  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+<!DOCTYPE html><html lang='en'><head>  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#065f46" />
+  <link rel="icon" href="assets/logo.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>BioreCyclio — Privacy</title>
+  <meta name="description" content="Privacy at BioreCyclio">
+  <style>
+    :root { --brand:#065f46; --brand-2:#059669; }
+    .glass { backdrop-filter: blur(10px); background: rgba(17,24,39,0.35); }
+    .hero::before { content:""; position:absolute; inset:0; background: linear-gradient(to top right, rgba(2,6,23,0.60), rgba(6,95,70,0.45)); }
+    .hero-img { object-fit: cover; width:100%; height:100%; }
+    .nav-link { color:#cbd5e1; }
+    .nav-link:hover { color:#a7f3d0; }
+    .btn-brand { background: var(--brand); }
+    .btn-brand:hover { background: #064e3b; }
+    .pill { border:1px solid rgba(255,255,255,0.2); }
+    .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+    .dot { width:10px; height:10px; border-radius:999px; background:#ffffff55; }
+    .dot.active { background:#ffffff; }
+  </style>
+</head><body class='bg-slate-950 text-slate-100 antialiased'>  <header class="sticky top-0 z-50 bg-slate-900/70 backdrop-blur border-b border-emerald-900">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 items-center justify-between">
         <a href="index.html" class="flex items-center gap-3">
           <img src="assets/logo.png" class="h-8 w-auto" alt="BioreCyclio logo" onerror="this.style.display='none'">
-          <span class="font-semibold text-lg">Biore<span class="text-sky-600">Cyclio</span></span>
+          <span class="font-semibold text-lg text-white">Biore<span class="text-emerald-400">Cyclio</span></span>
         </a>
         <nav class="hidden md:flex items-center gap-6 text-sm">
           <a href="index.html" class="nav-link">Home</a>
           <a href="technology.html" class="nav-link">Technology</a>
           <a href="model.html" class="nav-link">Biogas Model</a>
           <a href="impact.html" class="nav-link">Impact</a>
-          <a href="contact.html" class="px-3 py-2 rounded-full bg-sky-600 text-white hover:bg-sky-700">Contact</a>
+          <a href="contact.html" class="px-3 py-2 rounded-full bg-emerald-600 text-white hover:bg-emerald-700">Contact</a>
         </nav>
-        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-md border border-slate-300" aria-label="Open menu">
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-md border border-emerald-800 text-white" aria-label="Open menu">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
       </div>
     </div>
-    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200">
+    <div id="mobileMenu" class="md:hidden hidden border-t border-emerald-900 bg-slate-900/95">
       <div class="px-4 py-3 flex flex-col gap-3 text-sm">
         <a href="index.html" class="nav-link">Home</a>
         <a href="technology.html" class="nav-link">Technology</a>
         <a href="model.html" class="nav-link">Biogas Model</a>
         <a href="impact.html" class="nav-link">Impact</a>
-        <a href="contact.html" class="px-3 py-2 rounded-md bg-sky-600 text-white text-center">Contact</a>
+        <a href="contact.html" class="px-3 py-2 rounded-md bg-emerald-600 text-white text-center">Contact</a>
       </div>
     </div>
   </header>
-<section class='mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16'><h1 class='text-3xl font-bold'>Privacy</h1><p class='mt-2 text-slate-700'>We collect contact details you voluntarily provide (name, email, message) to respond to inquiries. No analytics cookies used.</p></section>  <footer class="border-t border-slate-200">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-slate-600">
+<section class='mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16'><h1 class='text-3xl font-bold'>Privacy</h1><p class='mt-2 text-slate-300'>We collect contact details you voluntarily provide (name, email, message) to respond to inquiries. No analytics cookies are used on this static site.</p></section>  <footer class="border-t border-emerald-900 bg-slate-950 text-slate-300">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-sm">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
         <p>&copy; <span id="year"></span> BioreCyclio. All rights reserved.</p>
         <nav class="flex gap-4">
-          <a href="assets/Biorecyclio-business-plan.pdf" class="hover:text-sky-600">Business Plan</a>
-          <a href="privacy.html" class="hover:text-sky-600">Privacy</a>
-          <a href="terms.html" class="hover:text-sky-600">Terms</a>
+          <a href="assets/Biorecyclio-business-plan.pdf" class="hover:text-emerald-400">Business Plan</a>
+          <a href="privacy.html" class="hover:text-emerald-400">Privacy</a>
+          <a href="terms.html" class="hover:text-emerald-400">Terms</a>
         </nav>
       </div>
     </div>
@@ -43,6 +64,6 @@
     document.getElementById('menuBtn')?.addEventListener('click', ()=>{
       document.getElementById('mobileMenu')?.classList.toggle('hidden');
     });
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const yEl=document.getElementById('year'); if(yEl) yEl.textContent = new Date().getFullYear();
   </script>
 </body></html>

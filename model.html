@@ -1,69 +1,76 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html><html lang='en'><head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0ea5e9" />
+  <meta name="theme-color" content="#065f46" />
   <link rel="icon" href="assets/logo.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <title>BioreCyclio — Biogas Sizing Model</title>
   <meta name="description" content="Interactive anaerobic digestion model to estimate daily biogas, energy, digester volume and organic loading rate.">
   <style>
-    .hero::before { content: ""; position: absolute; inset:0; background: linear-gradient(to top right, rgba(15,23,42,0.65), rgba(2,132,199,0.35)); }
-    .hero-img { object-fit: cover; width:100%; height:100%; filter: saturate(1.05); }
-    .nav-link { color:#475569; }
-    .nav-link:hover { color:#0284c7; }
-    .glass { backdrop-filter: blur(8px); background: rgba(255,255,255,0.75); }
+    :root { --brand:#065f46; --brand-2:#059669; }
+    .glass { backdrop-filter: blur(10px); background: rgba(17,24,39,0.35); }
+    .hero::before { content:""; position:absolute; inset:0; background: linear-gradient(to top right, rgba(2,6,23,0.60), rgba(6,95,70,0.45)); }
+    .hero-img { object-fit: cover; width:100%; height:100%; }
+    .nav-link { color:#cbd5e1; }
+    .nav-link:hover { color:#a7f3d0; }
+    .btn-brand { background: var(--brand); }
+    .btn-brand:hover { background: #064e3b; }
+    .pill { border:1px solid rgba(255,255,255,0.2); }
+    .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+    .dot { width:10px; height:10px; border-radius:999px; background:#ffffff55; }
+    .dot.active { background:#ffffff; }
   </style>
 
-</head><body class="text-slate-800 antialiased">  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+</head><body class='bg-slate-950 text-slate-100 antialiased'>  <header class="sticky top-0 z-50 bg-slate-900/70 backdrop-blur border-b border-emerald-900">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 items-center justify-between">
         <a href="index.html" class="flex items-center gap-3">
           <img src="assets/logo.png" class="h-8 w-auto" alt="BioreCyclio logo" onerror="this.style.display='none'">
-          <span class="font-semibold text-lg">Biore<span class="text-sky-600">Cyclio</span></span>
+          <span class="font-semibold text-lg text-white">Biore<span class="text-emerald-400">Cyclio</span></span>
         </a>
         <nav class="hidden md:flex items-center gap-6 text-sm">
           <a href="index.html" class="nav-link">Home</a>
           <a href="technology.html" class="nav-link">Technology</a>
           <a href="model.html" class="nav-link">Biogas Model</a>
           <a href="impact.html" class="nav-link">Impact</a>
-          <a href="contact.html" class="px-3 py-2 rounded-full bg-sky-600 text-white hover:bg-sky-700">Contact</a>
+          <a href="contact.html" class="px-3 py-2 rounded-full bg-emerald-600 text-white hover:bg-emerald-700">Contact</a>
         </nav>
-        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-md border border-slate-300" aria-label="Open menu">
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-md border border-emerald-800 text-white" aria-label="Open menu">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
       </div>
     </div>
-    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200">
+    <div id="mobileMenu" class="md:hidden hidden border-t border-emerald-900 bg-slate-900/95">
       <div class="px-4 py-3 flex flex-col gap-3 text-sm">
         <a href="index.html" class="nav-link">Home</a>
         <a href="technology.html" class="nav-link">Technology</a>
         <a href="model.html" class="nav-link">Biogas Model</a>
         <a href="impact.html" class="nav-link">Impact</a>
-        <a href="contact.html" class="px-3 py-2 rounded-md bg-sky-600 text-white text-center">Contact</a>
+        <a href="contact.html" class="px-3 py-2 rounded-md bg-emerald-600 text-white text-center">Contact</a>
       </div>
     </div>
   </header>
 
 <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
   <h1 class="text-4xl font-bold">Biogas Sizing Model</h1>
-  <p class="mt-2 text-slate-700 max-w-3xl">Estimate daily biogas production and size a wet anaerobic digester. Enter feedstocks (wet kg/day). Defaults for TS, VS, and specific gas yield (m³/kg VS) can be adjusted by changing feedstock types. Results are indicative—pilot testing is recommended.</p>
+  <p class="mt-2 text-slate-300 max-w-3xl">Estimate daily biogas production and size a wet anaerobic digester. Enter feedstocks (wet kg/day). Defaults for TS, VS, and specific gas yield (m³/kg VS) can be adjusted by changing feedstock types. Results are indicative—pilot testing is recommended.</p>
   <div class="mt-8 grid lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2">
-      <div class="rounded-2xl border border-slate-200 p-6">
-        <h2 class="font-semibold">Feedstocks (wet kg/day)</h2>
+      <div class="rounded-2xl border border-emerald-900 p-6 bg-slate-900">
+        <h2 class="font-semibold text-white">Feedstocks (wet kg/day)</h2>
         <div id="rows" class="mt-4 space-y-3"></div>
-        <div class="mt-4"><button onclick="addRow()" class="px-4 py-2 rounded-xl border border-slate-300 hover:bg-slate-50">+ Add feedstock</button></div>
+        <div class="mt-4"><button onclick="addRow()" class="px-4 py-2 rounded-xl border border-emerald-700 hover:bg-slate-800">+ Add feedstock</button></div>
         <div class="mt-6 grid sm:grid-cols-2 gap-4">
-          <label class="block"><span class="text-sm font-medium">Methane fraction of biogas</span><input id="ch4" type="number" min="0.4" max="0.7" step="0.01" value="0.60" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2"/><span class="text-xs text-slate-500">Typical 0.55–0.65</span></label>
-          <label class="block"><span class="text-sm font-medium">Hydraulic retention time (days)</span><input id="hrt" type="number" min="10" max="80" step="1" value="30" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2"/><span class="text-xs text-slate-500">20–40 days common (mesophilic)</span></label>
-          <label class="block"><span class="text-sm font-medium">Energy per m³ biogas (kWh/m³)</span><input id="kwhm3" type="number" min="5" max="7" step="0.1" value="6.0" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2"/><span class="text-xs text-slate-500">Assumes ~60% CH₄</span></label>
-          <label class="block"><span class="text-sm font-medium">Recommended gas storage (fraction of daily gas)</span><input id="storage" type="number" min="0.2" max="1.2" step="0.1" value="0.8" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2"/><span class="text-xs text-slate-500">0.5–1.0 typical</span></label>
+          <label class="block"><span class="text-sm font-medium">Methane fraction of biogas</span><input id="ch4" type="number" min="0.4" max="0.7" step="0.01" value="0.60" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 text-slate-900"/><span class="text-xs text-slate-400">Typical 0.55–0.65</span></label>
+          <label class="block"><span class="text-sm font-medium">Hydraulic retention time (days)</span><input id="hrt" type="number" min="10" max="80" step="1" value="30" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 text-slate-900"/><span class="text-xs text-slate-400">20–40 days common (mesophilic)</span></label>
+          <label class="block"><span class="text-sm font-medium">Energy per m³ biogas (kWh/m³)</span><input id="kwhm3" type="number" min="5" max="7" step="0.1" value="6.0" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 text-slate-900"/><span class="text-xs text-slate-400">Assumes ~60% CH₄</span></label>
+          <label class="block"><span class="text-sm font-medium">Recommended gas storage (fraction of daily gas)</span><input id="storage" type="number" min="0.2" max="1.2" step="0.1" value="0.8" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2 text-slate-900"/><span class="text-xs text-slate-400">0.5–1.0 typical</span></label>
         </div>
       </div>
     </div>
     <div>
-      <div class="rounded-2xl border border-slate-200 p-6">
-        <h2 class="font-semibold">Results</h2>
+      <div class="rounded-2xl border border-emerald-900 p-6 bg-slate-900">
+        <h2 class="font-semibold text-white">Results</h2>
         <dl class="mt-4 space-y-2 text-sm">
           <div class="flex justify-between"><dt>Total wet mass (kg/day)</dt><dd id="sumMass">0</dd></div>
           <div class="flex justify-between"><dt>Total VS (kg/day)</dt><dd id="sumVS">0</dd></div>
@@ -74,21 +81,21 @@
           <div class="flex justify-between"><dt>Organic loading rate OLR (kg VS/m³·day)</dt><dd id="olr">0</dd></div>
           <div class="flex justify-between"><dt>Suggested gas storage (m³)</dt><dd id="storageOut">0</dd></div>
         </dl>
-        <ul id="warn" class="mt-4 text-xs text-amber-700 list-disc list-inside"></ul>
-        <p class="mt-4 text-xs text-slate-500">Guidance only. Yields vary with substrate, temperature, pretreatment, and operation.</p>
+        <ul id="warn" class="mt-4 text-xs text-amber-400 list-disc list-inside"></ul>
+        <p class="mt-4 text-xs text-slate-400">Guidance only. Yields vary with substrate, temperature, pretreatment, and operation.</p>
       </div>
     </div>
   </div>
 </section>
 <script src="js/model.js"></script>
-  <footer class="border-t border-slate-200">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-slate-600">
+  <footer class="border-t border-emerald-900 bg-slate-950 text-slate-300">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-sm">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
         <p>&copy; <span id="year"></span> BioreCyclio. All rights reserved.</p>
         <nav class="flex gap-4">
-          <a href="assets/Biorecyclio-business-plan.pdf" class="hover:text-sky-600">Business Plan</a>
-          <a href="privacy.html" class="hover:text-sky-600">Privacy</a>
-          <a href="terms.html" class="hover:text-sky-600">Terms</a>
+          <a href="assets/Biorecyclio-business-plan.pdf" class="hover:text-emerald-400">Business Plan</a>
+          <a href="privacy.html" class="hover:text-emerald-400">Privacy</a>
+          <a href="terms.html" class="hover:text-emerald-400">Terms</a>
         </nav>
       </div>
     </div>
@@ -97,7 +104,6 @@
     document.getElementById('menuBtn')?.addEventListener('click', ()=>{
       document.getElementById('mobileMenu')?.classList.toggle('hidden');
     });
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const yEl=document.getElementById('year'); if(yEl) yEl.textContent = new Date().getFullYear();
   </script>
-
 </body></html>
